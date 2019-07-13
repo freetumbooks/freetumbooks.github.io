@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+head, body {
+margin: 0;
+padding: 0;
+height: 100%;
+}
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 2em;
+}
+.container {
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+flex-grow: 0;
+}
+h1 {
+color: hsl(0, 0%, 23%);
+margin: 0;
+font-size: 4em;
+}
+h2 {
+color: hsl(0, 0%, 30%);
+margin: 0;
+font-size: 1.5em;
+}
+a {
+color: hsl(0, 0%, 35%);
+margin: 0;
+text-decoration: none;
+margin-top: 1em;
+align-self: flex-end;
+}
+a:hover {
+filter: brightness(150%);
+}
+.underline {
+position: relative;
+}
+.underline::after {
+position: absolute;
+right: 0;
+bottom: -1em;
+content:"";
+/* background-image: url(https://www.freeiconspng.com/uploads/brush-stroke-grunge-transparent-background-6.png);*/ 
+background-image: url(https://i.pinimg.com/originals/2d/a7/8f/2da78f002fffc14b75915a78965b71fa.png);
+filter: hue-rotate(90deg) saturate(200%);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+width: 100%;
+height: 1.2em;
+overflow: visible;
+
+opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>freetumbooks</h1>
+<h2>The only eco-friendly and free* knowledge sharing service.</h2>
+<a href="https://en.wikipedia.org/wiki/Free_as_in_Freedom">*free as in 
+<span class="underline">freedom</span></a>
+</div>
+</body>
+</html>
