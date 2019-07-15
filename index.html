@@ -1,6 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
+
+  <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <style>
 ::selection {
@@ -36,7 +41,7 @@ body::after {
   z-index: -1;
 }
 .container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -70,7 +75,7 @@ a:hover {
   right: 0;
   bottom: -1em;
   content:"";
-  /* background-image: url(https://www.freeiconspng.com/uploads/brush-stroke-grunge-transparent-background-6.png);*/ 
+  /* background-image: url(https://www.freeiconspng.com/uploads/brush-stroke-grunge-transparent-background-6.png);*/
   background-image: url(https://i.pinimg.com/originals/2d/a7/8f/2da78f002fffc14b75915a78965b71fa.png);
   filter: hue-rotate(90deg) saturate(200%);
   background-repeat: no-repeat;
@@ -92,21 +97,147 @@ a:hover {
   animation-name: lightSpeedIn;
   animation-delay: inherit;
 }
+
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+}*/
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+   z-index: -1;
+  width: 100%;
+  height: 80%;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.5) 90%,rgba(0,0,0,.6) 100%);
+}
+/*
+section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 64px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+} */
+
+
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+#section01 a {
+  padding-top: 60px;
+}
+
+#section01 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
+
+#section02 a {
+  padding-top: 60px;
+}
+#section02 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section02 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
 </style>
+
+<script type="text/javascript">
+
+  $(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
+</script>
+
 </head>
 <body>
-  <section style="height: 100vh;">
+  <section style="height: 100vh;" >
     <div class="container">
-      <h1 class="animated fadeIn">treebooks</h1>
+      <h1 class="animated fadeIn"> <img src= "treebooks.png"></img> </h1>
       <h2 class="animated flipInX" style="animation-delay: .7s">The only eco-friendly and free* knowledge sharing service.</h2>
-      <a href="https://en.wikipedia.org/wiki/Free_as_in_Freedom" class="animated fadeIn" style="animation-delay: .7s">*free as in 
+      <a href="https://en.wikipedia.org/wiki/Free_as_in_Freedom" class="animated fadeIn" style="animation-delay: .7s">*free as in
       <span class="underline" style="animation-delay: 1.5s">freedom</span></a>
     </div>
 
-    <span style="position: absolute;  left: 0; right: 0; margin: auto; bottom: 1em; font-size: 1em; color: hsl(0, 0%, 20%); text-align: center; transform: rotate(90deg) !important; font-size: 1.5em; animation-delay: 1.5s;" class="animated flipInX">&gt;<span>
+    <div class="demo" id="section01" >
+    <a href="#section02" style="animation-delay: 1.5s" ><span></span>Scroll</a>
+    </div>
+    <!--<span style="position: absolute;  left: 0; right: 0; margin: auto; bottom: 1em; font-size: 1em; color: hsl(0, 0%, 20%); text-align: center; transform: rotate(90deg) !important; font-size: 1.5em; animation-delay: 1.5s;" id="#" class="animated flipInX" >&gt;
+    -->
+    </span>
+
+
   </section>
-  
-  <section style="height: 50vh; padding: 4em;">
+
+  <section style="height:  100vh; padding: 4em;" id="section02" class="demo">
     <div class="container" style="flex-direction: row; align-items: center; justify-content: space-around;">
       <h2 class="animated fadeIn" style="margin-right: 2em;">Making the world greener and smarter.</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Greentree.svg/1280px-Greentree.svg.png" style="width: 20%; opacity: .8;">
