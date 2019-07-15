@@ -11,9 +11,10 @@
 head, body {
 margin: 0;
 padding: 0;
-height: 100%;
+
 }
 section {
+position: relative;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -100,16 +101,16 @@ animation-delay: inherit;
 <h2 class="animated flipInX" style="animation-delay: .7s">The only eco-friendly and free* knowledge sharing service.</h2>
 <a href="https://en.wikipedia.org/wiki/Free_as_in_Freedom" class="animated fadeIn" style="animation-delay: .7s">*free as in 
 <span class="underline" style="animation-delay: 1.5s">freedom</span></a>
-<span style="position: absolute; bottom: 1em; font-size: 2em; transform: rotate(90deg); opacity: .5;">&lt;<span>
-</div>
-</section>
-<section style="height: 50vh; padding: 4em;">
-<div class="container" style="flex-direction: row; align-items: center;">
-<h2 class="animated fadeIn">Making the world greener and smarter.</h2>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Greentree.svg/1280px-Greentree.svg.png" style="width: 400px; opacity: .8;">
-<span style="position: absolute; bottom: 1em; font-size: 2em; opacity: .5;">Copyright © 2019, All rights reserved <span>
 </div>
 
+<span style="position: absolute;  left: 0; right: 0; margin: auto; bottom: 1em; font-size: 1em; color: hsl(0, 0%, 20%); text-align: center; transform: rotate(90deg) !important; font-size: 1.5em; animation-delay: 1.5s;" class="animated flipInX">&gt;<span>
+</section>
+<section style="height: 50vh; padding: 4em;">
+<div class="container" style="flex-direction: row; align-items: center; justify-content: space-around;">
+<h2 class="animated fadeIn" style="margin-right: 2em;">Making the world greener and smarter.</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Greentree.svg/1280px-Greentree.svg.png" style="width: 20%; opacity: .8;">
+</div>
+<span style="position: absolute;  left: 0; right: 0; margin: auto; bottom: 1em; font-size: 1em; opacity: .35; text-align: center;">Copyright © 2019, All rights reserved <span>
 </section>
 </body>
 </html>
